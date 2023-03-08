@@ -28,8 +28,24 @@
         <p id="werkdagen_reverse"></p>
     </div>
     <div>
-        <h2>De weekenddagen in omgekeerde volgorde zijn:</h2>
-        <p id="weekenddagen_reverse"></p>
+    <h2>De weekenddagen in omgekeerde volgorde zijn:</h2>
+    <p id="weekenddagen_reverse"></p>
+    <form onsubmit="return number_func()">
+        <label for="number">Hoeveel namen wilt u in de array stoppen? (minimaal 3)</label>
+        
+        <input type="number" id="number" name="quantity" value="3" min="3" max="10" pattern="">
+        <button>Submit</button>
+    </form>
+    <div>   
+        <label for="names">Welke namen?</label>
+        <input type="text" id="names" name="names">
+        <button id="button" onclick = "name_func()">Submit</button>
+    </div>
+    <div>
+        <h2 >De ingevoerde namen in de array zijn:</h2>
+        <p id="result"></p>
+        <h2>De ingevoerde namen in de array in omgekeerde volgorde zijn:</h2>
+        <p id="result_reverse"></p>
     </div>
     <script src="gelato.js"></script>
 </body>

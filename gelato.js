@@ -1,5 +1,25 @@
 const week = ["maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag"];
 const week_reverse = week.reverse()
+week[1]= "a"
+var namen
+var len
+
+function number_func(){
+    namen = [];
+    len = document.getElementById("number").value;
+    console.log(document.getElementById("number").value)
+    return false
+};
+
+function name_func(){
+    console.log(len)
+    namen.push(document.getElementById("names").value);
+    document.getElementById("names").value = "";
+    if (namen.length==len){
+        document.getElementById("result").innerHTML = namen.join(", ");
+        document.getElementById("result_reverse").innerHTML = namen.reverse().join(", ");
+    };
+};
 
 document.getElementById("weekdagen").innerHTML = week.join(", ")
 document.getElementById("werkdagen").innerHTML = week.slice(0,5).join(", ")
