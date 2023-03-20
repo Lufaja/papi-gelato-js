@@ -1,6 +1,5 @@
 const week = ["maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag"];
 const week_reverse = week.reverse()
-week[1]= "a"
 var namen
 var len
 
