@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+g
+</head>
+<body>
+    <div>
+        <h2>optellen</h2>
+        <div id="plus">
+
+        </div>
+    </div>
+    <div>
+        <h2>aftrekken</h2>
+        <div id="min">
+
+        </div>
+    </div>
+    <div>   
+        <h2>keer</h2>
+        <div id="keer">
+
+        </div>
+    </div>
+    <div>
+        <h2>gedeeld</h2>
+        <div id="delen">
+
+        </div>
+    </div>
+</body>
+
+
+<script>
+
+    var een = [1,2,3,4,5,6,7,8,9,10];
+    var twee = [2,4,6,8,10,12,14,16,18,20];
+    operators = ["plus","min","keer","delen"]
+
+    function reken(num1, num2, a){
+        switch(a){
+            case "plus":
+                som = "<div>" + num1 + " + " + num2 + " = " + (num1 + num2) + "</div>";
+                return som;
+                break;
+            case "min":
+                som = "<div>" + num2 + " - " + num1 + " = " + (num2 - num1) + "</div>";
+                return som;
+                break;
+            case "keer":
+                som = "<div>" + num1 + " * " + num2 + " = " + (num1 * num2) + "</div>";
+                return som;
+                break;
+            case "delen":
+                som = "<div>" + num2 + " / " + num1 + " = " + (num2 / num1) + "</div>";
+                return som;
+                break;
+        }
+    }
+    operators.forEach((op) => {
+        een.forEach((num1 , index) => {
+            num2 = twee[index];
+            $("#"+op).append(reken(num1,num2,op));
+        });
+    });
+
+</script>
+
+</html>
